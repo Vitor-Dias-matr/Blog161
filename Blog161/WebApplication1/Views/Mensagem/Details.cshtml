@@ -1,0 +1,42 @@
+﻿@model Blog161.Models.Mensagem
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h1>Details</h1>
+
+<div>
+    <h4>Mensagem</h4>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Titulo)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Titulo)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Descricao)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Descricao)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.DataMensagem)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.DataMensagem)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.Categorias)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.Categorias.CategoriaId)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.MensagemId">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
